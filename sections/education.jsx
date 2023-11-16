@@ -2,6 +2,7 @@
 import React, { Fragment, useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { IoSchoolSharp } from "react-icons/io5";
+import Pillars from "../public/images/Pillars.png";
 
 import { EducationData } from "@/constants/EducationData";
 
@@ -10,29 +11,29 @@ const Education = () => {
   const educationRef = useRef();
   const educationBoxesRef = useRef();
 
-  useEffect(() => {
-    const getScreenWidth = () =>
-      window.innerWidth ||
-      document.documentElement.clientWidth ||
-      document.body.clientWidth;
+  // useEffect(() => {
+  //   const getScreenWidth = () =>
+  //     window.innerWidth ||
+  //     document.documentElement.clientWidth ||
+  //     document.body.clientWidth;
 
-    const educationObserver = new IntersectionObserver(
-      ([educationEntry]) => {
-        setIsEducation(educationEntry.isIntersecting);
-      },
-      {
-        rootMargin: `${getScreenWidth() <= 700 ? "-100px" : "-300px"}`,
-      }
-    );
+  //   const educationObserver = new IntersectionObserver(
+  //     ([educationEntry]) => {
+  //       setIsEducation(educationEntry.isIntersecting);
+  //     },
+  //     {
+  //       rootMargin: `${getScreenWidth() <= 700 ? "-100px" : "-300px"}`,
+  //     }
+  //   );
 
-    educationObserver.observe(educationRef.current);
+  //   educationObserver.observe(educationRef.current);
 
-    if (isEducation) {
-      educationBoxesRef.current.classList.add("pop-up-child");
-    } else {
-      educationBoxesRef.current.classList.remove("pop-up-child");
-    }
-  }, [isEducation]);
+  //   if (isEducation) {
+  //     educationBoxesRef.current.classList.add("pop-up-child");
+  //   } else {
+  //     educationBoxesRef.current.classList.remove("pop-up-child");
+  //   }
+  // }, [isEducation]);
 
   return (
     <Fragment>
@@ -42,10 +43,10 @@ const Education = () => {
         ref={educationRef}
       >
         <h2 className='text-3xl font-bold text-center p-4 flex justify-center items-center gap-3'>
-          <IoSchoolSharp /> Education
+          <IoSchoolSharp /> Pillars of Strength
         </h2>
 
-        <div
+        {/* <div
           className='pop-down-child pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] flex flex-col gap-[20px] md:gap-[50px]'
           ref={educationBoxesRef}
         >
@@ -73,8 +74,12 @@ const Education = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
+      <Image
+      src={Pillars}
+
+      />
     </Fragment>
   );
 };

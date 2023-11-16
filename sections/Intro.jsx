@@ -2,6 +2,10 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Poster1 from "../public/images/poster1.png";
+import Image from "next/image";
+
+// ... (imports)
 
 const Intro = () => {
   const [isHome, setIsHome] = useState(false);
@@ -22,6 +26,15 @@ const Intro = () => {
       const homeObserver = new IntersectionObserver(
         ([homeEntry]) => {
           setIsHome(homeEntry.isIntersecting);
+
+          // Class manipulation moved here
+          if (homeEntry.isIntersecting) {
+            profileRef.current.classList.add("slide-in");
+            introRef.current.classList.add("slide-in");
+          } else {
+            profileRef?.current?.classList.remove("slide-in");
+            introRef.current.classList.remove("slide-in");
+          }
         },
         {
           rootMargin: `${getScreenWidth() <= 700 ? "-100px" : "-300px"}`,
@@ -29,21 +42,14 @@ const Intro = () => {
       );
 
       homeObserver.observe(homeRef.current);
-
-      if (isHome) {
-        profileRef.current.classList.add("slide-in");
-        introRef.current.classList.add("slide-in");
-      } else {
-        profileRef.current.classList.remove("slide-in");
-        introRef.current.classList.remove("slide-in");
-      }
     }
-  }, [homeRef, isHome]);
+  }, [homeRef]);
 
   return (
     <Fragment>
       <Head>
-        <title>Shiv&apos;s Portfolio</title>
+        
+        <title>Amars Dance Academy</title>
       </Head>
       <section id='home'>
         <div
@@ -55,42 +61,42 @@ const Intro = () => {
             ref={introRef}
           >
             <p className='py-2 text-2xl md:text-4xl font-semibold font-sans'>
-              Hi There !
+              Welcome to
             </p>
             {/* Profile Name */}
-            <p className='text-2xl md:text-4xl py-2 font-semibold font-sans'>
-              I&apos;m a full stack
-              <span className='text-[#c72c6c] dark:text-[#07d0e5]'>
+            {/* <p className='text-2xl md:text-4xl py-2 font-semibold font-sans'>
+              Amar Dance
+              <span className='text-[#c72c6c] dark:text-[#e59007]'>
                 {" "}
-                developer <span className='text-white'>|</span>
+                Academy <span className='text-amber-500'>|</span>
               </span>
-            </p>
+            </p> */}
             <div className='mt-5 md:mt-10 flex gap-3'>
-              {/* Hire Me Button */}
               <Link
                 className='text-white text-xl font-semibold rounded bg-red-400 hover:bg-red-500 px-2 py-1'
                 href={"#getInTouch"}
               >
-                Hire me
+                Join us
               </Link>
               {/* Download CV Button */}
               <Link
                 className='text-xl font-semibold rounded border border-red-500 hover:text-white hover:bg-red-500 px-2 py-1'
                 href='https://drive.google.com/file/d/1uk-tv12y8PK-WrE4oX2xRtmSy4PUVSsE/view'
                 target='_blank'
-              >
-                Download CV
-              </Link>
+              ></Link>
             </div>
           </div>
+          <Image
+          src={Poster1}
+        />
 
           {/* Image */}
           <div
-            className={
-              "translate-x-[500px] transition-all opacity-0 duration-700 w-[180px] h-[300px] md:w-[240px] md:h-[400px] bg-cover m-auto md:m-0 mt-[40px] md:mt-0 bg-no-repeat"
-            }
+            className="w-auto h-auto bg-cover bg-no-repeat"
             ref={profileRef}
-            style={{ backgroundImage: "url(/images/male.png)" }}
+            style={{
+              backgroundImage: `url(${Poster1})`, // Use Poster1 variable
+            }}
           />
         </div>
       </section>

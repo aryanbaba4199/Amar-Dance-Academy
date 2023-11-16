@@ -10,7 +10,8 @@ const SocialMedia = () => {
 
   return (
     <Fragment>
-      <div className='absolute left-14 bottom-10 flex flex-col gap-4 z-10'>
+      
+      <div className='absolute left-14 bottom-12 flex gap-4 z-10'>
         {SocialMediaData.map((social, key) => (
           <Link className='w-fit' href={social.link} key={key}>
             <div
@@ -28,7 +29,9 @@ const SocialMedia = () => {
           <MdFeedback />
         </button>
       </div>
+      
     </Fragment>
+    
   );
 };
 

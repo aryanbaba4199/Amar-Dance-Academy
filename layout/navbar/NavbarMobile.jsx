@@ -22,7 +22,7 @@ const NavbarMobile = ({ setShowMenu, setThemeFun, theme, showMenu, top }) => {
 
         {/* Name Logo */}
         <p className='text-gray-400 flex'>
-          <span className='text-lg font-bold'>SHIV</span> <DiTechcrunch />
+          <span className='text-lg font-bold'>Amar Dance Academy</span> <DiTechcrunch />
         </p>
       </div>
 

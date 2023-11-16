@@ -57,7 +57,7 @@ const TechStack = () => {
         ref={techStackRef}
       >
         <h2 className='text-3xl font-bold text-center p-4 flex justify-center items-center gap-3'>
-          <FaLaptopCode /> Tech Stack
+          <FaLaptopCode /> Wall Of Fame
         </h2>
 
         <div
