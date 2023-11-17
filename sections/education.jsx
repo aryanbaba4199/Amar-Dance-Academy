@@ -2,7 +2,7 @@
 import React, { Fragment, useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { IoSchoolSharp } from "react-icons/io5";
-import Pillars from "@/public/images/Pillars.png";
+
 
 import { EducationData } from "@/constants/EducationData";
 
