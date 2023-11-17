@@ -5,7 +5,7 @@ import { DiTechcrunch } from "react-icons/di";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 import { TbBulbFilled } from "react-icons/tb";
 import Image from "next/image";
-import LogoPic from "@/public/images/logo.jpg"
+import LogoPic from '../../public/images/logo.jpg'
 import MobileNavbar from "./SidebarMobile";
 import { NavbarMenu } from "./NavbarItems";
 import NavbarMobile from "./NavbarMobile";

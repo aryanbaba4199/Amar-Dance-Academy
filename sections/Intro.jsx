@@ -2,7 +2,7 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Poster1 from "@/public/images/poster1.png";
+import Poster1 from "../public/images/poster1.png";
 import Image from "next/image";
 
 // ... (imports)
