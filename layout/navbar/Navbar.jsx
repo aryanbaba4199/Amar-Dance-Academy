@@ -5,7 +5,7 @@ import { DiTechcrunch } from "react-icons/di";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 import { TbBulbFilled } from "react-icons/tb";
 import Image from "next/image";
-import LogoPic from '../../public/images/logo.jpg'
+
 import MobileNavbar from "./SidebarMobile";
 import { NavbarMenu } from "./NavbarItems";
 import NavbarMobile from "./NavbarMobile";
@@ -50,9 +50,9 @@ const Navbar = () => {
       >
         {/* Name Logo */}
         <p className='text-gray-400 flex'>
-          <Image
-            src={LogoPic}
-            width={68}
+          <img 
+            src="https://i.pinimg.com/564x/cc/b3/17/ccb317679fd2b7b7717bd7a1e36598ee.jpg"
+            width={40}
           />
         </p>
         <div className='h-full flex gap-4'>
