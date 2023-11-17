@@ -76,9 +76,9 @@ const Education = () => {
           ))}
         </div> */}
       </section>
-      <Image
-      src={Pillars}
-
+      <img
+      src="https://res-console.cloudinary.com/dmoygdwk1/media_explorer_thumbnails/196eee7447203bf929c858be4e219e74/detailed"
+      alt="Pillars Of Strength"
       />
     </Fragment>
   );

@@ -2,7 +2,7 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Poster1 from "../public/images/poster1.png";
+
 import Image from "next/image";
 
 // ... (imports)
@@ -60,9 +60,7 @@ const Intro = () => {
             className='translate-x-[-500px] transition-all duration-700 opacity-0'
             ref={introRef}
           >
-            <p className='py-2 text-2xl md:text-4xl font-semibold font-sans'>
-              Welcome to
-            </p>
+            
             {/* Profile Name */}
             {/* <p className='text-2xl md:text-4xl py-2 font-semibold font-sans'>
               Amar Dance
@@ -72,33 +70,44 @@ const Intro = () => {
               </span>
             </p> */}
             <div className='mt-5 md:mt-10 flex gap-3'>
-              <Link
-                className='text-white text-xl font-semibold rounded bg-red-400 hover:bg-red-500 px-2 py-1'
-                href={"#getInTouch"}
-              >
-                Join us
-              </Link>
+              
+              <p className='py-2 text-2xl md:text-4xl font-semibold font-sans'>
+              Welcome to
+            </p>
               {/* Download CV Button */}
               <Link
                 className='text-xl font-semibold rounded border border-red-500 hover:text-white hover:bg-red-500 px-2 py-1'
-                href='https://drive.google.com/file/d/1uk-tv12y8PK-WrE4oX2xRtmSy4PUVSsE/view'
+                href=""
                 target='_blank'
               ></Link>
             </div>
           </div>
-          <Image
-          src={Poster1}
+          <img
+          src="https://res-console.cloudinary.com/dmoygdwk1/media_explorer_thumbnails/cb2c775ca20194c2327be5344f86733f/detailed"
+            alt = "Slider Image"
         />
-
+        <Link
+                className='text-white text-xl font-semibold rounded top-10 bg-red-400 hover:bg-red-500 px-2 py-1'
+                href={"#getInTouch"}
+              >
+                Join us
+              </Link>
+              <img 
+            src="https://i.pinimg.com/564x/6a/52/33/6a5233f18276332bd379e2a73e061b27.jpg"
+            className="h-[24rem] origin-center mx-2"
+          />
           {/* Image */}
           <div
             className="w-auto h-auto bg-cover bg-no-repeat"
             ref={profileRef}
             style={{
-              backgroundImage: `url(${Poster1})`, // Use Poster1 variable
+              backgroundImage: `url(${"https://res-console.cloudinary.com/dmoygdwk1/media_explorer_thumbnails/cb2c775ca20194c2327be5344f86733f/detailed"})`, // Use Poster1 variable
             }}
           />
+          
+          
         </div>
+        
       </section>
     </Fragment>
   );
