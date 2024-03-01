@@ -64,7 +64,7 @@ const Intro = () => {
                 target="_blank"
               ></Link> 
               <div className="font-serif text-xl">
-              <p>Email : amarsdanceacademy</p>
+              <p>Email : amarsdanceacademy@gmail.com</p>
               <p>Mob : 6203443677</p>
               </div>
               
