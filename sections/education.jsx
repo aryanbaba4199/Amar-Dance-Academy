@@ -2,8 +2,7 @@
 import React, { Fragment, useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { IoSchoolSharp } from "react-icons/io5";
-import Neha from "@/public/images/Neha.jpg"
-import Amar from "@/public/images/amar.jpg"
+
 
 import { EducationData } from "@/constants/EducationData";
 
@@ -50,7 +49,9 @@ const Education = () => {
         <div>
           <div>
             <Image
-              src={Neha}
+            width={1000}
+            height={1000}
+              src={"/images/Neha.jpg"}
               alt="Neha Singh"
               className=" md:w-40 w-[100vh] px-4 rounded-xl"
             />
@@ -61,7 +62,9 @@ const Education = () => {
           </div>
           <div>
             <Image
-              src={Amar}
+            width={1000}
+            height={1000}
+              src="/images/amar.jpg"
               alt="Amarendra Kumar"
               className=" md:w-40 w-[100vh] px-4 rounded-xl"
             />
