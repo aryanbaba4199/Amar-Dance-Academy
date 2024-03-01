@@ -1,26 +1,24 @@
 export const NavbarMenu = [
     {
         name: "Home",
-        link: "#home",
+        link: "/",
     },
     {
         name: "About",
-        link: "#about",
+        link: "/aboutus",
     },
     {
-        name: "Fame",
-        link: "#techStack",
+        name: "Franchise",
+        link: "/franchise",
     },
     {
-        name: "Founder",
-        link: "#education",
-    },
-    {
-        name: "Team",
-        link: "#experience",
+        name: "Services",
+        link: "services",
     },
     {
         name: "Blogs",
-        link: "#project",
+        link: "blogs",
     },
+    
+    
 ];

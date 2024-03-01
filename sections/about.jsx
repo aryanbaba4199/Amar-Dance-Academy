@@ -100,7 +100,46 @@ const About = () => {
                   </p>
                 </div>
                 <p className='text-center md:text-left text-[#0b0c0c] dark:text-[#07d0e5]'>
-                  Patna, Bihar, India{" "}
+                  Bazar Samiti Gate, Saketpuri Road, Opposite B.K. Singh Classess, Patna 
+                </p>
+              </div>
+              <div className='w-fit px-4 py-2 mt-5 border border-gray-400 rounded flex flex-col items-center gap-2'>
+                <div className='flex gap-3 items-center'>
+                  <p className='text-center md:text-left text-[#c72c6c] dark:text-[#07d0e5]'>
+                    Location
+                  </p>
+                  <p>
+                    <ImLocation />
+                  </p>
+                </div>
+                <p className='text-center md:text-left text-[#0b0c0c] dark:text-[#07d0e5]'>
+                  Kumhrar, Bhoothnah Road, Beside Pani Tanki, Patna
+                </p>
+              </div>
+              <div className='w-fit px-4 py-2 mt-5 border border-gray-400 rounded flex flex-col items-center gap-2'>
+                <div className='flex gap-3 items-center'>
+                  <p className='text-center md:text-left text-[#c72c6c] dark:text-[#07d0e5]'>
+                    Location
+                  </p>
+                  <p>
+                    <ImLocation />
+                  </p>
+                </div>
+                <p className='text-center md:text-left text-[#0b0c0c] dark:text-[#07d0e5]'>
+                  Hanuman Nagar, Kali Mandir Road, Patna
+                </p>
+              </div>
+              <div className='w-fit px-4 py-2 mt-5 border border-gray-400 rounded flex flex-col items-center gap-2'>
+                <div className='flex gap-3 items-center'>
+                  <p className='text-center md:text-left text-[#c72c6c] dark:text-[#07d0e5]'>
+                    Location
+                  </p>
+                  <p>
+                    <ImLocation />
+                  </p>
+                </div>
+                <p className='text-center md:text-left text-[#0b0c0c] dark:text-[#07d0e5]'>
+                  Rajendra Nagar, Beside BSNL Office, Patna
                 </p>
               </div>
               {/* Age */}
@@ -114,7 +153,7 @@ const About = () => {
                   </p>
                 </div>
                 <p className='text-center md:text-left text-[#c72c6c] dark:text-[#07d0e5]'>
-                  2012{" "}
+                  2013{" "}
                 </p>
               </div>
               {/* Experience */}
@@ -128,7 +167,7 @@ const About = () => {
                   </p>
                 </div>
                 <p className='text-center md:text-left text-[#c72c6c] dark:text-[#07d0e5]'>
-                  1 Year{" "}
+                  11 Years{" "}
                 </p>
               </div>
               {/* Project */}

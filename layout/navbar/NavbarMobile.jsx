@@ -34,6 +34,7 @@ const NavbarMobile = ({ setShowMenu, setThemeFun, theme, showMenu, top }) => {
         >
           {theme === "dark" ? <TbBulbFilled /> : <BsFillLightningChargeFill />}
         </button>
+        
       </div>
     </div>
   );

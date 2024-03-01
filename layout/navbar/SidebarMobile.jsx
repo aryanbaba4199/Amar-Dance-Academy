@@ -2,10 +2,42 @@ import React, { Fragment } from "react";
 import Link from "next/link";
 import { IoMdClose } from "react-icons/io";
 import { DiTechcrunch } from "react-icons/di";
+import {auth, googleProvider} from '@/utils/firebase';
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signInWithRedirect,
+  getRedirectResult,
+} from "firebase/auth";
+import {  signOut } from "@firebase/auth";
 
 import { NavbarMenu } from "./NavbarItems";
 
 const MobileNavbar = ({ showMenu, setShowMenu }) => {
+
+  // ------------Handling Sign Out --------------------
+  const signOutHandler = async () => {
+    try{
+      await auth.signOut();
+      window.location.href = "/";
+    }catch(err){
+      console.log("Error:", err);
+    }
+  }
+
+  // ------------Handling google sign in ----------------
+  const signIn = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+      const user = auth.currentUser;
+      
+    } catch (error) {
+      console.error("error", error);
+    }
+  };
+
+
   return (
     <Fragment>
       <div
@@ -43,6 +75,7 @@ const MobileNavbar = ({ showMenu, setShowMenu }) => {
           <div className='p-2 flex flex-col gap-2'>
             {/* Navbar Links */}
             {NavbarMenu.map((navbar) => (
+              <>
               <Link
                 className='text-lg p-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 rounded'
                 href={navbar.link}
@@ -50,7 +83,20 @@ const MobileNavbar = ({ showMenu, setShowMenu }) => {
               >
                 {navbar.name}
               </Link>
+              
+              </>
             ))}
+            {auth.currentUser ? (
+              <button onClick={signOutHandler}
+              className='text-lg p-2  font-semibold bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 rounded'
+            >Log out</button>
+            ) : (
+              <button
+              onClick={()=>signIn()}
+              className='text-lg p-2 font-semibold bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 rounded'
+            >Log in</button>
+            ) }
+            
           </div>
         </div>
       </div>

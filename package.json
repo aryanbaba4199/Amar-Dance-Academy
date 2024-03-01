@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@firebase/auth": "^1.6.1",
     "@vercel/analytics": "^1.0.2",
     "axios": "^1.4.0",
+    "firebase": "^10.8.1",
     "framer-motion": "^10.12.18",
     "he": "^1.2.0",
     "mongoose": "^7.4.0",
@@ -22,7 +24,8 @@
     "react-icons": "^4.9.0",
     "react-responsive-carousel": "^3.2.23",
     "react-responsive-masonry": "^2.1.7",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "react-toastify": "^10.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

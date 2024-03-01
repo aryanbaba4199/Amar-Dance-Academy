@@ -2,7 +2,8 @@
 import React, { Fragment, useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { IoSchoolSharp } from "react-icons/io5";
-
+import Neha from "@/public/images/Neha.jpg"
+import Amar from "@/public/images/amar.jpg"
 
 import { EducationData } from "@/constants/EducationData";
 
@@ -46,40 +47,32 @@ const Education = () => {
           <IoSchoolSharp /> Pillars of Strength
         </h2>
 
-        {/* <div
-          className='pop-down-child pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] flex flex-col gap-[20px] md:gap-[50px]'
-          ref={educationBoxesRef}
-        >
-          {EducationData.map((education) => (
-            <div
-              className='transition-all duration-700 flex border border-zinc-300 dark:border-zinc-700 shadow-md shadow-zinc-300 dark:shadow-zinc-700 rounded gap-6'
-              key={education.name}
-            >
-              <Image
-                alt={education.name}
-                className='hidden md:block bg-blue-400'
-                height={150}
-                src={education.image}
-                width={150}
-              />
-              <div className='flex flex-col gap-2 p-3 md:p-1'>
-                <p className='text-xl md:text-2xl font-bold text-red-600'>
-                  {education.name}
-                </p>
-                <p>{education.schoolOrCollege}</p>
-                <p className=' text-blue-600'>
-                  {education.fromTo} &nbsp; | &nbsp;{" "}
-                  {education.statusOrPrecentage}
-                </p>
-              </div>
+        <div>
+          <div>
+            <Image
+              src={Neha}
+              alt="Neha Singh"
+              className=" md:w-40 w-[100vh] px-4 rounded-xl"
+            />
+            <div className="flex flex-col justify-center items-center">
+            <p className="text-lg font-serif font-semibold text-pink-600">Neha Singh</p>
+            <p className="font-serif text-pink-600">( Director )</p>
             </div>
-          ))}
-        </div> */}
+          </div>
+          <div>
+            <Image
+              src={Amar}
+              alt="Amarendra Kumar"
+              className=" md:w-40 w-[100vh] px-4 rounded-xl"
+            />
+            <div className="flex flex-col justify-center items-center">
+            <p className="text-lg font-serif font-semibold text-pink-600">Amrendra Kumar</p>
+            <p className="font-serif text-pink-600">( CEO )</p>
+            </div>
+          </div>
+        </div>
       </section>
-      <img
-      src="https://res-console.cloudinary.com/dmoygdwk1/media_explorer_thumbnails/196eee7447203bf929c858be4e219e74/detailed"
-      alt="Pillars Of Strength"
-      />
+      
     </Fragment>
   );
 };

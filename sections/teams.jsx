@@ -1,5 +1,11 @@
 import React from "react";
 import { IoSchoolSharp } from "react-icons/io5";
+import Team1 from "@/public/images/team1.jpg";
+import Team2 from "@/public/images/team2.jpg";
+import Team3 from "@/public/images/team3.jpg";
+import Team4 from "@/public/images/team4.jpg";
+import Team5 from "@/public/images/team5.jpg";
+import Image from "next/image";
 
 const linkedin = "https://cdn-icons-png.flaticon.com/256/1384/1384014.png"
 const inimage = "https://cdn-icons-png.flaticon.com/256/4401/4401407.png"
@@ -9,12 +15,12 @@ const Teamfn = ({ imageSrc, Name, designation }) => (
   <div class="card2">
     <div class="background"></div>
     <div class="logo">
-      <img src={imageSrc} className="team-img" />
+      <Image src={imageSrc} className="team-img" />
       <h3 className="team-name">{Name}</h3>
       <p style={{fontSize : 15}} className="team-name">{designation}</p>
     </div>
 
-    <a href="#">
+    
       <div class="box box1">
         <span class="icon">
           <img
@@ -23,9 +29,9 @@ const Teamfn = ({ imageSrc, Name, designation }) => (
           />
         </span>
       </div>
-    </a>
+    
 
-    <a href="##">
+    
       <div class="box box2">
         {" "}
         <span class="icon">
@@ -36,9 +42,9 @@ const Teamfn = ({ imageSrc, Name, designation }) => (
           
         </span>
       </div>
-    </a>
+    
 
-    <a href="###">
+    
       <div class="box box3">
         <span class="icon">
           <img
@@ -47,7 +53,7 @@ const Teamfn = ({ imageSrc, Name, designation }) => (
           />
         </span>
       </div>
-    </a>
+    
 
     <div class="box box4"></div>
   </div>
@@ -57,34 +63,33 @@ export default function service() {
   const teammembers = [
     {
       imageSrc:
-        "https://i.pinimg.com/564x/87/97/ef/8797eff6d668c8ab55ee60b86a458e73.jpg",
-      Name: "Gopal Gonzales",
-      Designatation: "Office Administrator",
-    },
-    {
-      imageSrc:
-        "https://i.pinimg.com/564x/f9/52/aa/f952aa91662d41c24e6a83a69c4b624b.jpg",
-      Name: "Jacky Kumar",
-      Designatation: "Program Co-ordinator",
-    },
-    {
-      imageSrc:
-        "https://scontent.fdbd4-1.fna.fbcdn.net/v/t1.18169-9/13007157_869943669781393_7489435474966132691_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=be3454&_nc_ohc=qmt214N7jnwAX-95-mH&_nc_ht=scontent.fdbd4-1.fna&oh=00_AfBRAn7bH-C_azADFHywDfjQE5vlpRZlcI1jbcWeJgIQgQ&oe=6560B3C3",
+        Team1,
       Name: "Suchita Singh",
       Designatation: "Service Manager",
     },
     {
       imageSrc:
-        "https://scontent.fdbd4-1.fna.fbcdn.net/v/t1.6435-9/94225815_1961220547356169_8084389337505988608_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=300f58&_nc_ohc=fZWf_9nu7PUAX8zrND6&_nc_ht=scontent.fdbd4-1.fna&oh=00_AfA2Jmzd-J8kpinvJzTxw6C8JgQpIYndkgXPVPC3TctuEg&oe=656093DD",
+        Team2,
+      Name: "Gopal Gonzales",
+      Designatation: "Ofiice Administration",
+    },
+    {
+      imageSrc:
+        Team3,
+      Name: "Jacky Kumar",
+      Designatation: "Program Co-ordinator",
+    },
+    {
+      imageSrc:
+        Team4,
       Name: "Reshmi Kumari",
       Designatation: "Branch Manager",
     },
-
     {
       imageSrc:
-        "https://scontent.fdbd4-1.fna.fbcdn.net/v/t39.30808-6/315328055_1406568316836282_5571535970581196225_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=e_FWJ2cyqiUAX84MQDd&_nc_ht=scontent.fdbd4-1.fna&oh=00_AfCqbvg2vWx4DQtEWEtD5xwibjWfxGBKRGF7Eyz0NWElRg&oe=653EEAD3",
-      Name: "Ashish Gaurav",
-      Designatation: "Head of Media & Event",
+        Team5,
+      Name: "Aasish Gaurav",
+      Designatation: "HOD",
     },
     
   ];

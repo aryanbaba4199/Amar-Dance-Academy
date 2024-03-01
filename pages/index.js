@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Teams from "@/sections/teams";
@@ -19,11 +19,11 @@ const ChatSystem = dynamic(() => import("@/utils/ChatSystem"))
 const Feedback = dynamic(() => import("@/utils/Feedback"))
 
 const Home = () => {
-
+  
   return (
     <Fragment>
      
-      <div>
+      <div className="mt-8">
         <div>
           {/* Desktop Navbar */}
           <Navbar />

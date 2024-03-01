@@ -4,7 +4,14 @@ import Link from "next/link";
 import { DiTechcrunch } from "react-icons/di";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 import { TbBulbFilled } from "react-icons/tb";
-import Image from "next/image";
+import {auth,googleProvider } from "@/utils/firebase"
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signInWithRedirect,
+  getRedirectResult,
+} from "firebase/auth";
 
 import MobileNavbar from "./SidebarMobile";
 import { NavbarMenu } from "./NavbarItems";
@@ -17,6 +24,29 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const { setThemeFun, theme } = useContext(ThemeContext);
+
+
+  
+  // ------------Handling Sign Out --------------------
+  const signOutHandler = async () => {
+    try{
+      await auth.signOut();
+      window.location.href = "/";
+    }catch(err){
+      console.log("Error:", err);
+    }
+  }
+
+  // ------------Handling google sign in ----------------
+  const signInWithGoogle = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+      const user = auth.currentUser;
+      
+    } catch (error) {
+      console.error("error", error);
+    }
+  };
 
   // Logic for Navbar Hide and Show on scrolling behaviour
   useEffect(() => {
@@ -68,6 +98,19 @@ const Navbar = () => {
               </div>
             </Link>
           ))}
+          <div className="flex justify-center items-center font-serif text-pink-600 font-semibold">
+            
+          {auth.currentUser ? (
+              <button onClick={signOutHandler}
+              className='text-lg p-2  font-semibold bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 rounded'
+            >Log out</button>
+            ) : (
+              <button
+              onClick={signInWithGoogle}
+              className='text-lg p-2 font-semibold bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 rounded'
+            >Log in</button>
+            ) }
+          </div>
         </div>
         {/* Toggle Theme button */}
         <div className='flex items-center gap-4'>

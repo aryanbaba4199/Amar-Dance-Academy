@@ -1,6 +1,14 @@
 "use client";
 import React, { Fragment, useState, useEffect, useRef } from "react";
 import { FaLaptopCode } from "react-icons/fa";
+import Skill1 from "@/public/images/skill1.jpg";
+import Skill2 from "@/public/images/skill2.jpg";
+import Skill3 from "@/public/images/Skill3.jpg";
+import Skill4 from "@/public/images/Skill4.jpg";
+import Skill5 from "@/public/images/Skill5.jpg";
+import Skill6 from "@/public/images/Skill6.jpg";
+import Skill7 from "@/public/images/skill7.jpg";
+import Image from "next/image";
 
 import { TechStackData } from "@/constants/SkillsData";
 
@@ -52,16 +60,16 @@ const TechStack = () => {
   return (
     <Fragment>
       <section
-        className='shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-hidden'
-        id='techStack'
+        className="shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-hidden"
+        id="techStack"
         ref={techStackRef}
       >
-        <h2 className='text-3xl font-bold text-center p-4 flex justify-center items-center gap-3'>
-          <FaLaptopCode /> Wall Of Fame
+        <h2 className="text-3xl font-bold text-center p-4 flex justify-center items-center gap-3">
+          <FaLaptopCode /> We Upskills
         </h2>
 
         <div
-          className='pop-down transition-all w-fit duration-500 m-auto rounded-lg border border-black dark:border-white border-solid overflow-hidden'
+          className="pop-down transition-all w-fit duration-500 m-auto rounded-lg border border-black dark:border-white border-solid overflow-hidden"
           ref={buttonsRef}
         >
           <button
@@ -76,7 +84,7 @@ const TechStack = () => {
           >
             Advance
           </button>
-          <button
+          {/* <button
             className={`w-[120px] md:w-[150px] p-2 font-bold ${
               section === "Good" ? "bg-red-600" : null
             } transition-all border-l border-r border-black dark:border-white border-solid`}
@@ -87,8 +95,8 @@ const TechStack = () => {
             }}
           >
             Good
-          </button>
-          <button
+          </button> */}
+          {/* <button
             className={`w-[100px] md:w-[150px] p-2 font-bold ${
               section === "Familiar" ? "bg-red-600" : null
             } transition-all`}
@@ -99,22 +107,121 @@ const TechStack = () => {
             }}
           >
             Familiar
-          </button>
+          </button> */}
         </div>
 
         <div
-          className='pop-down-child flex min-h-[450px] py-[30px] px-[20px] md:px-[100px] flex-wrap justify-center items-center gap-5'
+          className="pop-down-child flex min-h-[450px] py-[30px] px-[20px] md:px-[100px] flex-wrap justify-center items-center gap-5"
           ref={techBoxesRef}
         >
-          {sectionData.map((tech) => (
-            <div
-              className='transition-all duration-700 px-2 h-fit py-3 md:py-5 w-[120px] md:w-[150px] border border-black dark:border-white border-solid rounded flex flex-col gap-3 items-center'
-              key={tech.name}
-            >
-              <p>{tech.icon}</p>
-              <p>{tech.name}</p>
-            </div>
-          ))}
+          <div className="mt-4">
+            <Image
+              src={Skill1}
+              className="md:w-48 w-[100vh] px-4"
+              alt="Contemporary Dance"
+            />
+            <h2 className="text-center text-xl font-semibold text-pink-700 font-serif">
+              Contemporary Dance
+            </h2>
+            <p className="text-blue-700">
+              Connect your mind and body through fluid dance movements from the
+              graceful contemporary dance
+            </p>
+          </div>
+          <div className="mt-4">
+            <Image
+              src={Skill2}
+              className="md:w-48 w-[100vh] px-4"
+              alt="Bollywood Dance"
+            />
+            <h2 className="text-center text-xl font-semibold text-pink-700 font-serif">
+              Bollywood Dance
+            </h2>
+            <p className="text-blue-700">
+              Learn to move and groove on bollywood songs from our talanted and
+              experienced choreographers
+            </p>
+          </div>
+
+          <div className="mt-4">
+            <Image
+              src={Skill3}
+              className="md:w-48 w-[100vh] px-4"
+              alt="Bollywood Dance"
+            />
+            <h2 className="text-center text-xl font-semibold text-pink-700 font-serif">
+              Hip Hop
+            </h2>
+            <p className="text-blue-700">
+              Learn wide range of street style dance forms such as loking ,
+              popping, breaking etc. from our choreographers
+            </p>
+          </div>
+
+          <div className="mt-4">
+            <Image
+              src={Skill4}
+              className="md:w-48 w-[100vh] px-4"
+              alt="Bollywood Dance"
+            />
+            <h2 className="text-center text-xl font-semibold text-pink-700 font-serif">
+              Folk
+            </h2>
+            <p className="text-blue-700">
+              A dandce that reflects the life of the people of a certain Country
+              or Reigion
+            </p>
+          </div>
+          <div className="mt-4">
+            <Image
+              src={Skill5}
+              className="md:w-48 w-[100vh] px-4"
+              alt="Bollywood Dance"
+            />
+            <h2 className="text-center text-xl font-semibold text-pink-700 font-serif">
+              Lyrical
+            </h2>
+            <p className="text-blue-700">It is one of Contemporary Art</p>
+          </div>
+          <div className="mt-4">
+            <Image
+              src={Skill5}
+              className="md:w-48 w-[100vh] px-4"
+              alt="Bollywood Dance"
+            />
+            <h2 className="text-center text-xl font-semibold text-pink-700 font-serif">
+              Funk
+            </h2>
+            <p className="text-blue-700">
+              A Fusion of several Genres including JAZZ, HIPHOP and DISCO
+            </p>
+          </div>
+          <div className="mt-4">
+            <Image
+              src={Skill6}
+              className="md:w-48 w-[100vh] px-4"
+              alt="Bollywood Dance"
+            />
+            <h2 className="text-center text-xl font-semibold text-pink-700 font-serif">
+              FreeStyle
+            </h2>
+            <p className="text-blue-700">
+              A spontanious movement in your body that takes a form of dance
+            </p>
+          </div>
+          <div className="mt-4">
+            <Image
+              src={Skill7}
+              className="md:w-48 w-[100vh] px-4"
+              alt="Bollywood Dance"
+            />
+            <h2 className="text-center text-xl font-semibold text-pink-700 font-serif">
+              Salsa
+            </h2>
+            <p className="text-blue-700">
+              A Latin American Dance music that elements Jazz and Rock
+            </p>
+          </div>
         </div>
       </section>
     </Fragment>
