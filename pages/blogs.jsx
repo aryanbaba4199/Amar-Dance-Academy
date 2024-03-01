@@ -82,7 +82,7 @@ const BlogsPage = () => {
         setTitle("");
         setTempImageURL("");
         setDescription("");
-        setImage("");
+        setImage()
       }
     } catch (e) {
       toast("Something went wrong");
