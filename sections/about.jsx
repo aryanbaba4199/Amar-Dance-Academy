@@ -4,7 +4,7 @@ import Image from "next/image";
 import Amar from "../public/images/Amar.png";
 import { FaBlackTie, FaUserCheck } from "react-icons/fa";
 import { ImLocation } from "react-icons/im";
-import { IoPerson } from "react-icons/io5";
+
 import { BsMenuAppFill } from "react-icons/bs";
 
 const About = () => {

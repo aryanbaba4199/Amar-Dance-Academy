@@ -1,13 +1,7 @@
 "use client";
 import React, { Fragment, useState, useEffect, useRef } from "react";
 import { FaLaptopCode } from "react-icons/fa";
-import Skill1 from "@/public/images/skill1.jpg";
-import Skill2 from "@/public/images/skill2.jpg";
-import Skill3 from "@/public/images/Skill3.jpg";
-import Skill4 from "@/public/images/Skill4.jpg";
-import Skill5 from "@/public/images/Skill5.jpg";
-import Skill6 from "@/public/images/Skill6.jpg";
-import Skill7 from "@/public/images/skill7.jpg";
+
 import Image from "next/image";
 
 import { TechStackData } from "@/constants/SkillsData";
@@ -116,7 +110,8 @@ const TechStack = () => {
         >
           <div className="mt-4">
             <Image
-              src={Skill1}
+              src="/images/skill1.jpg"
+              width={300} height={300}
               className="md:w-48 w-[100vh] px-4"
               alt="Contemporary Dance"
             />
@@ -130,7 +125,8 @@ const TechStack = () => {
           </div>
           <div className="mt-4">
             <Image
-              src={Skill2}
+              src="/images/skill2.jpg"
+              width={300} height={300}
               className="md:w-48 w-[100vh] px-4"
               alt="Bollywood Dance"
             />
@@ -145,7 +141,8 @@ const TechStack = () => {
 
           <div className="mt-4">
             <Image
-              src={Skill3}
+              src="/images/skill3.jpg"
+              width={300} height={300}
               className="md:w-48 w-[100vh] px-4"
               alt="Bollywood Dance"
             />
@@ -160,7 +157,8 @@ const TechStack = () => {
 
           <div className="mt-4">
             <Image
-              src={Skill4}
+              src="/images/skill4.jpg"
+              width={300} height={300}
               className="md:w-48 w-[100vh] px-4"
               alt="Bollywood Dance"
             />
@@ -172,20 +170,11 @@ const TechStack = () => {
               or Reigion
             </p>
           </div>
+          
           <div className="mt-4">
             <Image
-              src={Skill5}
-              className="md:w-48 w-[100vh] px-4"
-              alt="Bollywood Dance"
-            />
-            <h2 className="text-center text-xl font-semibold text-pink-700 font-serif">
-              Lyrical
-            </h2>
-            <p className="text-blue-700">It is one of Contemporary Art</p>
-          </div>
-          <div className="mt-4">
-            <Image
-              src={Skill5}
+              src="/images/skill5.jpg"
+              width={300} height={300}
               className="md:w-48 w-[100vh] px-4"
               alt="Bollywood Dance"
             />
@@ -198,7 +187,8 @@ const TechStack = () => {
           </div>
           <div className="mt-4">
             <Image
-              src={Skill6}
+              src="/images/skill6.jpg"
+              width={300} height={300}
               className="md:w-48 w-[100vh] px-4"
               alt="Bollywood Dance"
             />
@@ -211,7 +201,8 @@ const TechStack = () => {
           </div>
           <div className="mt-4">
             <Image
-              src={Skill7}
+              src="/images/skill7.jpg"
+              width={300} height={300}
               className="md:w-48 w-[100vh] px-4"
               alt="Bollywood Dance"
             />

@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
-import Picture from "@/public/images/picture1.jpg";
 
 const Intro = () => {
   const [isHome, setIsHome] = useState(false);
@@ -84,7 +83,9 @@ const Intro = () => {
           />
         </div>
         <Image
-          src={Picture}
+          src="/images/picture1.jpg"
+          width={1000}
+          height={1000}
           className="w-[200vh]"
         />
       </section>

@@ -1,16 +1,14 @@
 "use client";
 import React, { Fragment, useContext, useEffect, useState } from "react";
 import Link from "next/link";
-import { DiTechcrunch } from "react-icons/di";
+
 import { BsFillLightningChargeFill } from "react-icons/bs";
 import { TbBulbFilled } from "react-icons/tb";
 import {auth,googleProvider } from "@/utils/firebase"
 import {
-  getAuth,
+
   signInWithPopup,
-  GoogleAuthProvider,
-  signInWithRedirect,
-  getRedirectResult,
+  
 } from "firebase/auth";
 
 import MobileNavbar from "./SidebarMobile";
